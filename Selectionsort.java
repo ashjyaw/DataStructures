@@ -1,10 +1,12 @@
 import java.util.*;
-public class Main {
+public class selectionsort 
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Main ob = new Main(); 
-		int arrL;
+	public static void main(String[] args) 
+	{
+		
+	selectionsort ob = new selectionsort(); 
+	int arrL;
         Scanner scan = new Scanner(System.in);
         System.out.println("enter array length: ");
         arrL = scan.nextInt();
@@ -14,44 +16,45 @@ public class Main {
         {
         	System.out.println("Enter int " + i + " thats above 50 and below 70 :");
         	temp = scan.nextInt();
-        	if (temp < 50 || temp > 70) 
+        	if (temp < 50 || temp > 70) // set parameters due to project
         	{
         		System.out.println("Enter new int thats actually above 50 and below 70 : ");
         		arr[i-1] = scan.nextInt();
         	}
-        	else{
+        	else
+		{
         		arr[i-1] = temp;
         	}
         }
         ob.sort(arr); 
         System.out.println("Sorted array"); 
         ob.printArray(arr);
-		scan.close();
+	scan.close();
 	}
 	
-	private void printArray(int[] arr) {
-		int n = arr.length; 
+	private void printArray(int[] arr) //that print array function!!
+	{
+	int n = arr.length; 
         for (int i=0; i<n; ++i) 
         System.out.print(arr[i]+" "); 
         System.out.println(); 
 		
 	}
 
-	void sort(int arr[]) 
-    { 
+	void sort(int arr[]) //selection sort
+    	{ 
         int n = arr.length; 
   
-        
         for (int i = 0; i < n-1; i++) 
         { 
              
             int min_idx = i; 
-            for (int j = i+1; j < n; j++) 
+            for (int j = i+1; j < n; j++)	 //cool formating because i can do it without{} 
                 if (arr[j] < arr[min_idx]) 
                     min_idx = j; 
   
             
-            int temp = arr[min_idx]; 
+            int temp = arr[min_idx]; //that real swap action
             arr[min_idx] = arr[i]; 
             arr[i] = temp; 
         } 
