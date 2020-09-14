@@ -45,11 +45,11 @@ public class selectionsort
     	{ 
         int n = arr.length; 
   
-        for (int i = 0; i < n-1; i++) 
+        for (int i = 0; i < n-1; i++) //this runs n-1 times too my man
         { 
              
-            int min_idx = i; 
-            for (int j = i+1; j < n; j++)	 //cool formating because i can do it without{} 
+            int min_idx = i; 			//this inside loop runs n-1 times every time the outerloop runs once
+            for (int j = i+1; j < n; j++) 	 //cool formating because i can do it without{} 
                 if (arr[j] < arr[min_idx]) 
                     min_idx = j; 
   
